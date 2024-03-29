@@ -7,6 +7,7 @@ import RiverCats from "../public/river-cats.png";
 
 const slides = [
 	<CollectionCard
+		key={1}
 		image={LasVegas}
 		name="Las Vegas Aviators"
 		date="oct 15"
@@ -16,6 +17,7 @@ const slides = [
 		btnTxt="Take Flight Collection"
 	/>,
 	<CollectionCard
+		key={2}
 		image={RiverCats}
 		name="Sacramento River Cats"
 		date="oct 15"
@@ -25,6 +27,7 @@ const slides = [
 		btnTxt="Orange Collection"
 	/>,
 	<CollectionCard
+		key={3}
 		image={LasVegas}
 		name="Las Vegas Aviators"
 		date="oct 15"
@@ -34,6 +37,7 @@ const slides = [
 		btnTxt="Take Flight Collection"
 	/>,
 	<CollectionCard
+		key={4}
 		image={RiverCats}
 		name="Sacramento River Cats"
 		date="oct 15"

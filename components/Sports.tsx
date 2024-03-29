@@ -49,8 +49,9 @@ const Sports = () => {
 				<ThemeSwitch />
 			</div>
 			<div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8">
-				{SPORTS_ARRAY.map((sport) => (
+				{SPORTS_ARRAY.map((sport, index) => (
 					<SportsCard
+						key={index}
 						image={sport.image}
 						title={sport.title}
 						totalEvents={sport.totalEvents}
