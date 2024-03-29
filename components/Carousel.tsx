@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LeftAngle from "../public/left-angle.svg";
 import RightAngle from "../public/right-angle.svg";
 import Image from "next/image";
@@ -10,6 +10,7 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ slides }) => {
 	const [currentIndex, setCurrentIndex] = useState<number>(0);
+	const [visibleSlides, setVisibleSlides] = useState<number>(3);
 
 	const nextSlide = () => {
 		setCurrentIndex((prevIndex) =>
@@ -23,14 +24,35 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
 		);
 	};
 
+	const handleResize = () => {
+		if (window.innerWidth >= 1024) {
+			setVisibleSlides(3);
+		} else if (window.innerWidth > 640) {
+			setVisibleSlides(2);
+		} else {
+			setVisibleSlides(1);
+		}
+	};
+
+	useEffect(() => {
+		handleResize();
+
+		window.addEventListener("resize", handleResize);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+
 	return (
 		<div className="relative w-10/12">
-			<div className="flex overflow-hidden pb-12">
+			<div className="flex overflow-hidden pb-8">
 				{slides.map((slide, index) => (
 					<div
 						key={index}
-						className={`flex-shrink-0 mr-12 w-[30%] md:w-[30%] lg:w-[30%] ${
-							index >= currentIndex && index < currentIndex + 3
+						className={`flex-shrink-0 mr-12 w-[100%] md:w-[50%] lg:w-[30%] ${
+							index >= currentIndex &&
+							index < currentIndex + visibleSlides
 								? "block"
 								: "hidden"
 						}`}
@@ -41,13 +63,13 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
 			</div>
 			<button
 				onClick={prevSlide}
-				className="absolute z-[5] top-1/2 -left-[10%] transform flex items-center justify-center -translate-y-1/2 bg-transparent border-blue-500 border text-white px-3 py-4"
+				className="absolute z-[5] top-1/2 -left-[23%] md:-left-[10%] transform flex items-center justify-center -translate-y-1/2 bg-transparent border-blue-500 border text-white px-3 py-4"
 			>
 				<Image src={LeftAngle} alt="slide left" />
 			</button>
 			<button
 				onClick={nextSlide}
-				className="absolute z-[5] top-1/2 -right-[10%] transform flex items-center justify-center -translate-y-1/2 bg-transparent border-blue-500 border text-white px-3 py-4"
+				className="absolute z-[5] top-1/2 -right-[23%] md:-right-[10%] transform flex items-center justify-center -translate-y-1/2 bg-transparent border-blue-500 border text-white px-3 py-4"
 			>
 				<Image src={RightAngle} alt="slide right" />
 			</button>

@@ -1,19 +1,9 @@
 import React from "react";
-import Carousel from "./CarouselBeta";
+import Carousel from "./Carousel";
 import { Poppins } from "next/font/google";
 import CollectionCard from "./CollectionCard";
 import LasVegas from "../public/las-vagas-aviators.png";
 import RiverCats from "../public/river-cats.png";
-
-// const slides = [
-// 	<div className="bg-red-500 h-64">Slide 1</div>,
-// 	<div className="bg-blue-500 h-64">Slide 2</div>,
-// 	<div className="bg-green-500 h-64">Slide 3</div>,
-// 	<div className="bg-orange-500 h-64">Slide 4</div>,
-// 	<div className="bg-pink-500 h-64">Slide 5</div>,
-// 	<div className="bg-violet-500 h-64">Slide 6</div>,
-// 	// Add more slides as needed
-// ];
 
 const slides = [
 	<CollectionCard

@@ -29,7 +29,7 @@ export default function ThemeSwitch() {
 	return (
 		<div>
 			<button className="mr-1" onClick={toggleDarkMode}>
-				{theme === "dark" ? "🌙" : "☀️"}
+				{theme === "dark" ? "☀️" : "🌙"}
 			</button>
 		</div>
 	);
