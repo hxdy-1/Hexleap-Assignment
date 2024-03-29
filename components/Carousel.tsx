@@ -63,13 +63,13 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
 			</div>
 			<button
 				onClick={prevSlide}
-				className="absolute z-[5] top-1/2 -left-[23%] md:-left-[10%] transform flex items-center justify-center -translate-y-1/2 bg-transparent border-blue-500 border text-white px-3 py-4"
+				className="absolute z-[5] top-1/2 -left-[23%] md:-left-[10%] transform flex items-center justify-center -translate-y-1/2 bg-transparent border-blue-500 border text-white px-3 py-4 transition-all duration-200 hover:border-blue-600 hover:rounded hover:scale-[1.03]"
 			>
 				<Image src={LeftAngle} alt="slide left" />
 			</button>
 			<button
 				onClick={nextSlide}
-				className="absolute z-[5] top-1/2 -right-[23%] md:-right-[10%] transform flex items-center justify-center -translate-y-1/2 bg-transparent border-blue-500 border text-white px-3 py-4"
+				className="absolute z-[5] top-1/2 -right-[23%] md:-right-[10%] transform flex items-center justify-center -translate-y-1/2 bg-transparent border-blue-500 border text-white px-3 py-4 transition-all duration-200 hover:border-blue-600 hover:rounded hover:scale-[1.03]"
 			>
 				<Image src={RightAngle} alt="slide right" />
 			</button>

@@ -10,7 +10,7 @@ interface SportsProp {
 
 const SportsCard = (props: SportsProp) => {
 	return (
-		<div className="flex flex-col gap-2 bg-white text-black dark:bg-dark-secondary dark:text-white p-2 shadow-lg">
+		<div className="flex flex-col gap-2 bg-white text-black dark:bg-dark-secondary dark:text-white p-2 shadow-lg transition-all duration-200 hover:scale-[1.01] cursor-pointer">
 			<Image src={props.image} alt={props.title} />
 			<h4 className="tracking-wider">{props.title}</h4>
 			<div className="flex w-full rounded-sm p-2 bg-[#F7F7F8] text-black dark:bg-dark-tertiary dark:text-white">
@@ -32,8 +32,5 @@ const SportsCard = (props: SportsProp) => {
 		</div>
 	);
 };
-
-// box-shadow: 0px 4px 8px 0px #0000000D;
-// shadow-[0px_4px_8px_0px_#0000000D]
 
 export default SportsCard;

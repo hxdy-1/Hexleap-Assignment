@@ -4,7 +4,7 @@ import AdImage from "../public/ad.png";
 
 const Ad = () => {
 	return (
-		<div className="w-[230px] flex flex-col gap-2 bg-white text-black dark:bg-dark-secondary dark:text-white p-2 shadow-lg">
+		<div className="w-[230px] flex flex-col gap-2 bg-white text-black dark:bg-dark-secondary dark:text-white p-2 shadow-lg transition-all duration-200 hover:scale-[1.01] cursor-pointer">
 			<div className="relative">
 				<Image src={AdImage} alt="Ad"></Image>
 				<span className="bg-black absolute right-0 top-0 px-4 py-0.5 font-semibold text-white">

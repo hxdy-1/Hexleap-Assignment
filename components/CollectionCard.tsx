@@ -41,7 +41,7 @@ const CollectionCard = (props: CollectionCardProps) => {
 				<address className="not-italic text-[#525965] dark:text-[#DFDFDF] text-sm leading-5 tracking-wider text-center">
 					{props.address}
 				</address>
-				<button className="bg-black text-white capitalize w-full text-center px-2 py-2 font-[500] tracking-wide">
+				<button className="bg-black text-white capitalize w-full text-center px-2 py-2 font-[500] tracking-wide transition-all duration-200 hover:scale-[1.01] hover:rounded">
 					{props.btnTxt}
 				</button>
 			</div>

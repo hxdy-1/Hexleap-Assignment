@@ -16,6 +16,9 @@ const config: Config = {
 					tertiary: "#292B32",
 				},
 			},
+			rotate: {
+				360: "360deg",
+			},
 			// fontFamily: {
 			// 	poppins: ["Poppins", "sans-serif"],
 			// 	inter: ["Inter", "sans-serif"],

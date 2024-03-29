@@ -28,7 +28,10 @@ export default function ThemeSwitch() {
 
 	return (
 		<div>
-			<button className="mr-1" onClick={toggleDarkMode}>
+			<button
+				className="mr-1 transition-all duration-500 hover:scale-[1.02] hover:rotate-360"
+				onClick={toggleDarkMode}
+			>
 				{theme === "dark" ? "☀️" : "🌙"}
 			</button>
 		</div>
