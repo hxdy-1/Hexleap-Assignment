@@ -4,6 +4,8 @@
 
 ## **Completed the assignment from the Hexleap Pvt Ltd**
 
+***Please use the emoji button on top right of your screen to switch themes***
+
 [Figma design](https://www.figma.com/file/ILhqTNgZ8z0y8NjV8QtlYv/Hexleap-Frontend-Assignment?type=design&node-id=0:1&mode=design&t=nEoAYu5bFl3KSVlX-1)
 
 ### 1. Created the design both in light and dark modes
